@@ -1,16 +1,16 @@
-create or replace view analysis.orders --view �� �էѧߧߧ��ާ� ��� �٧ѧܧѧ٧ѧ�, ���ݧ�٧�ӧѧ�֧ݧ��, �ӧܧݧ��ѧ� ���ѧ��� �٧ѧܧѧ٧�
+create or replace view analysis.orders --view с данными по заказам, пользователям, включая статус заказа
 	as select * from production.orders;
 
-create or replace view analysis.products --view �� �ާ֧ߧ� �ӧܧݧ��ѧ� ����ڧާ����
+create or replace view analysis.products --view с меню включая стоимость
 	as select * from production.products;
 
-create or replace view analysis.orderitmes --view �� �էѧߧߧ��ާ� ��� �ܧѧاէ�ާ� �٧ѧܧѧ٧� ��ѧ٧է֧ݧ֧ߧߧ�� ��� �ҧݧ�էѧ� �ڧ� �ާ֧ߧ�
+create or replace view analysis.orderitmes --view с данными по каждому заказу разделенное по блюдам из меню
 	as select * from production.orderitems;
 	
-create or replace view analysis.orderstatuses --view �� ���ڧ�ѧߧڧ֧� ���ѧ���� �٧ѧܧѧ٧� Open/Cooking/Delivering/Closed/Cancelled = 1/2/3/4/5 
+create or replace view analysis.orderstatuses --view с описанием статуса заказа Open/Cooking/Delivering/Closed/Cancelled = 1/2/3/4/5 
 	as select *	from production.orderstatuses;
 	
-create or replace view analysis.orderstatuslog --view �� �ݧ�ԧѧާ� �٧ѧܧѧ٧�� �� �ڧ� ������اէ֧ߧڧ� ��� ��ѧ٧ߧ��� ���ѧ���ѧ� 1/2/3/4/5
+create or replace view analysis.orderstatuslog ---view с логами заказов и их прохождению по разным статусам 1/2/3/4/5
 	as select * from production.orderstatuslog; 
 	
 	
