@@ -5,7 +5,7 @@ select ord.order_id,
 	ord_log.status_id as status
 		from production.orders ord 
 		join production.orderstatuslog ord_log on ord.order_id = ord_log.order_id 
-		where ord_log.dttm = ( --�ӧ��ҧڧ�ѧ֧� �ާѧܧ�ڧާѧݧ�ߧ�� �էѧ�� ��ҧߧ�ӧݧ֧ߧڧ� �� �ݧ�ԧѧ�
+		where ord_log.dttm = ( --выбираем максимальную дату обновления в логах
 							  select max(ord_date.dttm) 
 							  from production.orderstatuslog ord_date 
 							  where ord_date.order_id = ord.order_id) 
