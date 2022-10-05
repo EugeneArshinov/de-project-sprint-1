@@ -1,0 +1,3 @@
+добавил в datamart_ddl.sql  IF NOT EXISTS
+с комментарием согласен
+Спасибо!
